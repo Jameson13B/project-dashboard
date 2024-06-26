@@ -122,21 +122,22 @@
   height: 70px;
   width: 50px;
 }
-.link-row .arrow {
+.link-row .arrow-container .arrow-black {
   position: absolute;
   height: 70px;
   width: 50px;
-}
-.link-row .arrow-container .arrow-black {
   transform: translate(-50px);
   transition: transform 0.5s;
 }
 .link-row .arrow-container .arrow-white {
+  position: absolute;
+  height: 70px;
+  width: 50px;
   transform: translate(0px);
   transition: transform 0.5s;
 }
 .link-row:hover .arrow-container .arrow-black {
-  transform: translate(-25px);
+  transform: translate(0px);
 }
 .link-row:hover .arrow-container .arrow-white {
   transform: translate(50px);
@@ -144,5 +145,13 @@
 @media (max-width: 575.98px) {
   .link-row .arrow-container {
     margin-right: 0;
+  }
+  .link-row .arrow-container .arrow-black {
+    height: 42px;
+    width: 30px;
+  }
+  .link-row .arrow-container .arrow-white {
+    height: 42px;
+    width: 30px;
   }
 }

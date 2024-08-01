@@ -26,6 +26,9 @@
 .link-row .screenshot {
   max-height: 55px;
   margin-left: 14px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  align-self: flex-start;
 }
 @media (max-width: 575.98px) {
   .link-row .screenshot {
@@ -44,7 +47,6 @@
 .link-row .info .name-container {
   position: relative;
   overflow: hidden;
-  height: 72px;
 }
 .link-row .info .name {
   /* name */
@@ -58,27 +60,42 @@
 }
 .link-row .info .name.white {
   transform: translateY(0px);
-  transition: transform 0.75s;
+  transition: color 0.75s;
+  /* transition: transform 0.75s; */
 }
-.link-row .info .name.black {
+/* .link-row .info .name.black {
   color: #090909;
   transform: translateY(0);
   transition: transform 0.75s;
-}
+} */
 .link-row:hover .info .name.white {
-  transform: translateY(-72px);
+  color: #090909;
+  /* transform: translateY(-72px); */
 }
-.link-row:hover .info .name.black {
+/* .link-row:hover .info .name.black {
   transform: translateY(-72px);
-}
+} */
 .link-row .info .technologies {
   /* technologies */
-  margin-left: 1rem;
+  margin-left: 16px;
+  margin-top: 0.25rem;
+  transition: all 0.5s;
+  text-align: start;
+  font-size: 0.7rem;
+  font-family: 'Plus Jakarta Sans Variable';
+}
+.link-row:hover .info .technologies {
+  color: #090909;
+}
+.link-row .info .description {
+  /* description */
+  margin-left: 16px;
+  margin-bottom: 0;
   transition: all 0.5s;
   text-align: start;
   font-family: 'Plus Jakarta Sans Variable';
 }
-.link-row:hover .info .technologies {
+.link-row:hover .info .description {
   color: #090909;
 }
 @media (max-width: 575.98px) {
@@ -87,20 +104,27 @@
     padding: 8px 0;
   }
   .link-row .info .name-container {
-    height: 36px;
+    height: 24px;
   }
   .link-row .info .name {
     font-size: 1.5rem;
     margin-left: 1rem;
+    font-weight: bold;
   }
   .link-row .info .technologies {
     margin-top: 0;
-    font-size: 0.9rem;
+    font-size: 12px;
+  }
+  .link-row .info .description {
+    margin-top: 0;
+    font-size: 12px;
   }
   .link-row .info .name.white {
+    font-size: 16px;
     transform: translateY(0px);
   }
-  .link-row .info .name.black {
+  /* .link-row .info .name.black {
+    font-size: 16px;
     transform: translateY(-72px);
   }
   .link-row:hover .info .name.white {
@@ -108,7 +132,7 @@
   }
   .link-row:hover .info .name.black {
     transform: translateY(-36px);
-  }
+  } */
 }
 
 /* Arrow styles */

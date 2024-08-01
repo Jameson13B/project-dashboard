@@ -5,6 +5,7 @@ export const LinkRow = ({
 }: {
   project: {
     name: string
+    description: string
     screenshot: string
     technologies: string
     link: string
@@ -37,9 +38,12 @@ export const LinkRow = ({
       <div className="info">
         <div className="name-container">
           <p className="name white">{project.name}</p>
-          <p className="name black">{project.name}</p>
+          {/* <p className="name black">{project.name}</p> */}
         </div>
-        <p className="technologies">{project.technologies}</p>
+        <div>
+          <p className="description">{project.description}</p>
+          <p className="technologies">{project.technologies}</p>
+        </div>
       </div>
       <div className="arrow-container">
         <svg

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef } from "react"
 
 export const LinkRow = ({
   project,
@@ -19,22 +19,26 @@ export const LinkRow = ({
     const link = linkRef.current
     const click = clickRef.current
 
-    link?.addEventListener('mouseenter', () => {
+    link?.addEventListener("mouseenter", () => {
       click?.play()
     })
-    link?.addEventListener('mouseleave', () => click?.pause())
+    link?.addEventListener("mouseleave", () => click?.pause())
 
     return () => {
-      link?.removeEventListener('mouseenter', () => () => {
+      link?.removeEventListener("mouseenter", () => () => {
         click?.play()
       })
-      link?.removeEventListener('mouseleave', () => click?.pause())
+      link?.removeEventListener("mouseleave", () => click?.pause())
     }
   }, [])
 
   return (
     <a className="link-row" href={project.link} ref={linkRef}>
-      <img className="screenshot" src={project.screenshot} />
+      {project.screenshot !== "null" ? (
+        <img className="screenshot" src={project.screenshot} />
+      ) : (
+        <div className="screenshot placeholder"></div>
+      )}
       <div className="info">
         <div className="name-container">
           <p className="name white">{project.name}</p>
@@ -67,7 +71,7 @@ export const LinkRow = ({
         ref={clickRef}
         preload="auto"
         muted={true}
-        style={{ display: 'none' }}
+        style={{ display: "none" }}
       >
         <source src="https://backstage.bonjovi.com/audio/tick.mp3"></source>
         Your browser isn't invited for super fun audio time.

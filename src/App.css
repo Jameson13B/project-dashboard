@@ -17,7 +17,6 @@
   margin: 0 14px;
   width: calc(100% - 28px);
   transition: all 0.5s;
-  cursor: url("./assets/icon-paper-plane-48.png"), auto;
 }
 .link-row:hover {
   background-color: white;

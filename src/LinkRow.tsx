@@ -33,7 +33,13 @@ export const LinkRow = ({
   }, [])
 
   return (
-    <a className="link-row" href={project.link} ref={linkRef}>
+    <a
+      className="link-row"
+      href={project.link}
+      ref={linkRef}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {project.screenshot !== "null" ? (
         <img className="screenshot" src={project.screenshot} />
       ) : (

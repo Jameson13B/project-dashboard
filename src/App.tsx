@@ -2,23 +2,24 @@ import scorekeeper from "./assets/scorekeeper.png"
 import vault from "./assets/vault.png"
 import gilluly from "./assets/gilluly.png"
 import spark from "./assets/spark.png"
+import a10brews from "./assets/a10brews.png"
 import "./App.css"
 import { LinkRow } from "./LinkRow"
 
 const data = [
+  {
+    name: "Spark",
+    description: "Get a spark of inspiration.",
+    screenshot: spark,
+    technologies: "React, GSAP, vanilla-extract",
+    link: "https://spark.jamesonb.com/",
+  },
   {
     name: "Score Keeper",
     description: "Keep score for your game nights.",
     screenshot: scorekeeper,
     technologies: "React, Chakra UI, Firebase",
     link: "https://scorekeeper.jamesonb.com/",
-  },
-  {
-    name: "Spark",
-    description: "Get a spark of inspiration.",
-    screenshot: spark,
-    technologies: "React, GSAP, vanilla-extract",
-    link: "https://brews.atomic10.studio",
   },
   {
     name: "Vault Game",
@@ -40,6 +41,13 @@ const data = [
     screenshot: gilluly,
     technologies: "React, Styled Components, Firebase",
     link: "https://gilluly.jamesonb.com/",
+  },
+  {
+    name: "A10 Brews",
+    description: "Status of all Atomic10 Brews.",
+    screenshot: a10brews,
+    technologies: "React, TypeScript, TailwindCSS",
+    link: "https://brews.atomic10.studio",
   },
 ]
 
